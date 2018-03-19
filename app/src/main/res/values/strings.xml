@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="headline">Program do obliczania BMI</string>
+    <string name="weight">Podaj swoją wagę w kg:</string>
+    <string name="height">Podaj swój wzrost w cm:</string>
+    <string name="calculateBtn">Oblicz</string>
+    <string name="result"/>
+    <string name="bmiText">Twoje BMI to: </string>
+    <string name="bmiDesc"/>
+    <string name="bmiLow">Masz niedowagę. Twoje BMI jest mniejsze niż 18,5.</string>
+    <string name="bmiNorm">Masz prawdłową wagę. Twoje BMI jest pomiędzy 18,5 i 25.</string>
+    <string name="bmiHigh">Masz nadwagę. Twoje BMI jest powyżej 25.</string>
+    <string name="emptyTextEdit">Nie wpisałeś którejś wartości!</string>
+    <string name="isZero">Żadna z tych wartości nie może być równa zero!</string>
+    </resources>
