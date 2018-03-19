@@ -17,39 +17,39 @@ public class BMI extends AppCompatActivity {
         setContentView(R.layout.activity_bmi);
     }
 
-    EditText waga =  (EditText) findViewById(R.id.editWeight);
-    TextView res=(TextView) findViewById(R.id.result);
-    String bmiTex=getString(R.string.bmiText);
-    EditText wzrost =  (EditText) findViewById(R.id.editHeight);
-    TextView desc=(TextView) findViewById(R.id.bmiDesc);
-    String isZero=getString(R.string.isZero);
-    String isEmpty=getString(R.string.emptyTextEdit);
+    private EditText weightEditText =  (EditText) findViewById(R.id.editWeight);
+    private TextView result=(TextView) findViewById(R.id.result);
+    private String bmiText=getString(R.string.bmiText);
+    private EditText heightEditText=  (EditText) findViewById(R.id.editHeight);
+    private TextView description=(TextView) findViewById(R.id.bmiDesc);
+    private String isZero=getString(R.string.isZero);
+    private String isEmpty=getString(R.string.emptyTextEdit);
 
-    double weight=0;
-    double height=0;
-    double bmi=0;
+    private double weight=0;
+    private double height=0;
+    private double bmi=0;
 
     public void caluclateBtnFire(View view) {
 
         try{
-            weight=Double.parseDouble(waga.getText().toString());
-            height=Double.parseDouble(wzrost.getText().toString());
+            weight=Double.parseDouble(weightEditText.getText().toString());
+            height=Double.parseDouble(heightEditText.getText().toString());
         }catch(NumberFormatException e){
-            res.setText(isEmpty);
+            result.setText(isEmpty);
         }
 
         if(weight==0 |height==0){
-            res.setText(isZero);
+            result.setText(isZero);
         }else {
             bmi = weight / (Math.pow(height / 100, 2));
-            res.setText(bmiTex+" "+new DecimalFormat("##.##").format(bmi));
+            result.setText(bmiText+" "+new DecimalFormat("##.##").format(bmi));
            if(bmi<18.5){
-                desc.setText(R.string.bmiLow);}
+               description.setText(R.string.bmiLow);}
             else if(bmi>=25){
-                desc.setText(R.string.bmiHigh);
+               description.setText(R.string.bmiHigh);
             }
             else if(bmi>18.5&&bmi<25){
-                desc.setText(R.string.bmiNorm);
+               description.setText(R.string.bmiNorm);
             }
         }
 
