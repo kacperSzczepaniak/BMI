@@ -50,7 +50,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
         android:background="@android:color/holo_green_light"
-        android:onClick="caluclateBtnFire"
+        android:onClick="caluclateButttonFire"
         android:text="@string/calculateBtn"
         android:visibility="visible" />
     <EditText

@@ -29,7 +29,7 @@ public class BMI extends AppCompatActivity {
     private double height=0;
     private double bmi=0;
 
-    public void caluclateBtnFire(View view) {
+    public void caluclateButttonFire(View view) {
 
         try{
             weight=Double.parseDouble(weightEditText.getText().toString());
